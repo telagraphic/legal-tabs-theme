@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+  flex-direction: column;
+
+  &__header {}
+  &__main {
+    flex: 1 0 auto;
+  }
+  &__footer {
+    flex-shrink: 0;
+  }
+}

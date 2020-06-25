@@ -1,0 +1,85 @@
+@import "../config/functions";
+@import "../config/mixins";
+@import "../config/variables";
+
+
+.page-header {
+  display: grid;
+  width: 100%;
+
+
+  &__banner {
+    // grid-column: 1 / 2;
+    // grid-row: 1 / 2;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 25vh;
+
+    background-image: url('../img/tabs-header-background.png');
+    background-position: center center;
+    background-repeat: none;
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+
+      align-self: center;
+
+    }
+
+    &-name {
+      font-size: 4rem;
+    }
+    &-description {
+      font-size: 2rem;
+    }
+  }
+
+  &__navigation {
+    // grid-column: 1 / 2;
+    // grid-row: 1 / 2;
+    align-self: flex-end;
+    justify-self: center;
+
+    width: 100%;
+    background-color: white;
+  }
+
+  &__navigation-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__navigation-list-item {
+    position: relative;
+    display: inline-block;
+
+    margin: 0;
+    padding: 1%;
+
+    background: #FFFFFF;
+    font-size: calc(14px + (26 - 14) * ((100vw - 320px) / (2000 - 320)));
+
+  }
+
+  &__navigation-list-link {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+}
