@@ -5,10 +5,56 @@
 
 .page-footer {
   display: flex;
+
   width: 100%;
-  height: 25vh;
+  padding: 5% 0;
 
-  background-color: black;
+  background-color: $black-background;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-column-gap: 4%;
+
+    margin: 0 auto;
+    width: $page-width;
+  }
 
 
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contact-item {
+    padding: .745rem 0;
+    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (2500 - 300)));
+
+    color: white;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__map {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__map-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
