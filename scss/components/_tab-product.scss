@@ -42,3 +42,9 @@
     text-decoration: none;
   }
 }
+
+.product__tabs {}
+.product__tabs-form {
+  display: flex;
+  flex-direction: column;
+}
