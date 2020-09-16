@@ -70,6 +70,7 @@ const tabProduct = {
   },
   resetTabForm: function() {
     this.formResetButton.addEventListener('click', event => {
+      event.preventDefault();
       this.tabInputs.forEach(tab => tab.value = 0);
       this.totalTabs = 0;
       this.updatePrice();
@@ -154,9 +155,6 @@ const tabProduct = {
     // lookup pricing for weight and size
     const priceBreaks = table[0].size[sizeAndPosition];
     // multiple quantity against price breaks
-
-    console.log("total tabs: ", this.totalTabs);
-
     let updatedPrice = 0;
     if (isNaN(this.totalTabs) || this.totalTabs === 0) {
       updatedPrice = 0;
@@ -170,9 +168,8 @@ const tabProduct = {
       updatedPrice = parseFloat(parseInt(this.totalTabs) * priceBreaks[3]).toFixed(2);
     }
 
+    console.log("total tabs: ", this.totalTabs);
     console.log("final price: ", updatedPrice);
-
-    // display
     return updatedPrice;
   }
 
