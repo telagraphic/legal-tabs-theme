@@ -1,9 +1,0 @@
-@mixin viewport($viewport-width) {
-  @media (min-width: $viewport-width) {
-    @content;
-  }
-}
-
-@mixin container-width($width) {
-  @content;
-}

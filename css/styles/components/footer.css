@@ -1,23 +1,18 @@
-@import "../config/functions";
-@import "../config/mixins";
-@import "../config/variables";
-
-
 .page-footer {
   display: flex;
-
-  width: 100%;
   padding: 5% 0;
 
-  background-color: $black-background;
+  width: 100%;
+
+  background-color: var(--black-background);
 
   &__container {
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    grid-column-gap: 4%;
 
     margin: 0 auto;
-    width: $page-width;
+    width: var(--page-width);
+    grid-template-columns: 1.5fr 2fr;
+    grid-column-gap: 4%;
   }
 
 
@@ -28,9 +23,9 @@
 
   &__contact-item {
     padding: .745rem 0;
-    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (2500 - 300)));
 
     color: white;
+    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (2500 - 300)));
 
     a {
       color: white;
@@ -45,9 +40,9 @@
 
   &__map {
     position: relative;
+    overflow: hidden;
     padding-bottom: 75%;
     height: 0;
-    overflow: hidden;
   }
 
   &__map-iframe {

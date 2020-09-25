@@ -1,0 +1,30 @@
+.product-form__letter-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  grid-column-gap: 3rem;
+
+}
+
+
+.letter-form__column {
+
+}
+
+.letter-form__label {
+  display: grid;
+
+  align-items: center;
+  grid-template-columns: 10% .75fr;
+  grid-column-gap: 5%;
+
+
+
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+  }
+}

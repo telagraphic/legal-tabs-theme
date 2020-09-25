@@ -1,17 +1,9 @@
-@import "../config/functions";
-@import "../config/mixins";
-@import "../config/variables";
-
-
 .page-header {
   display: grid;
   width: 100%;
 
 
   &__banner {
-    // grid-column: 1 / 2;
-    // grid-row: 1 / 2;
-
     display: flex;
     justify-content: center;
 
@@ -20,35 +12,33 @@
 
     background-image: url('../img/paper-stacks-vertical.png');
     background-position: center center;
-    background-repeat: none;
     background-size: cover;
+    background-repeat: none;
 
     &-title {
       display: flex;
       flex-direction: column;
-      place-items: center;
       align-self: center;
+      place-items: center;
 
     }
 
     &-name {
-      color: $black-background;
+      color: var(--black-background);
       font-size: calc(22px + (64 - 22) * ((100vw - 320px) / (2000 - 320)));
     }
     &-description {
-      color: $black-background;
+      color: var(--black-background);
       font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (2000 - 320)));
     }
   }
 
   &__navigation {
-    // grid-column: 1 / 2;
-    // grid-row: 1 / 2;
     align-self: flex-end;
-    justify-self: center;
 
     width: 100%;
     background-color: white;
+    justify-self: center;
   }
 
   &__navigation-list {
@@ -69,20 +59,19 @@
   }
 
   &__navigation-list-link {
-    width: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
 
     color: $black-soft;
-    font-weight: 600;
     text-decoration: none;
+    font-weight: 600;
 
     transition: color .25s ease-in;
 
     &:hover,
     &:focus {
-      color: $black-pure;
-      // text-decoration: underline;
+      color: var(--black-pure);
     }
   }
 
